@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1d1d1d;
+      color: orange;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .dashboard-container {
+      width: 90%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      border: 3px solid #4c4c4c;
+      background-color: #2b2b2b;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+    }
+
+    .chart-container {
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #4c4c4c;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #ff8c00;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e07b00;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="chart-container">
+      <h2>Days Spent Volunteering</h2>
+      <canvas id="daysSpentChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Volunteering Tasks Done</h2>
+      <canvas id="tasksDoneChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Performance Rating</h2>
+      <canvas id="performanceRatingChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Client Satisfaction</h2>
+      <canvas id="clientSatisfactionChart"></canvas>
+    </div>
+  </div>
+  
+  <button id="updateButton">Update</button>
+    <script>
+        let daysSpent = 0;
+        let tasksDone = 0;
+        let performanceRating = 0;
+        let clientSatisfaction = 0;
+
+        document.getElementById('updateButton').addEventListener('click', () => {
+            daysSpent += Math.floor(Math.random() * 10);
+            tasksDone += Math.floor(Math.random() * 5);
+            performanceRating = Math.min(100, performanceRating + Math.floor(Math.random() * 5));
+            clientSatisfaction = Math.min(100, clientSatisfaction + Math.floor(Math.random() * 3));
+            updateCharts();
+        });
+
+        function updateCharts() {
+            // Your chart update logic here
+        }
+
+        updateCharts();
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4tp0diYMyuFRFhuB1xI7izkShuNQejrQ",
+            authDomain: "devknights-5ff52.firebaseapp.com",
+            projectId: "devknights-5ff52",
+            storageBucket: "devknights-5ff52.appspot.com",
+            messagingSenderId: "752875440538",
+            appId: "1:752875440538:web:f524275e7c635632d25223",
+            measurementId: "G-8HH3L6L8QF"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    
+     <script src="js.js"></script>
+</body>
+</html>

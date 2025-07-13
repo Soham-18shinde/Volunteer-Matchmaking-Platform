@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Matching Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .text-section {
+            max-width: 50%;
+        }
+        .text-section h1 {
+            font-size: 2.5em;
+        }
+        .text-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .text-section li {
+            margin: 10px 0;
+        }
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .image-section img {
+            width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .engagement-box {
+            background: #fff;
+            color: #000;
+            padding: 15px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-section {
+                max-width: 100%;
+            }
+            .image-section img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>Elevate Your Volunteering Experience with Us</h1>
+            <p>Explore a world of local volunteering opportunities designed for your skills and interests.</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Skill Matching</li>
+                <li><i class="fas fa-check"></i> Seamless Tracking</li>
+                <li><i class="fas fa-check"></i> Event Notifications</li>
+            </ul>
+        </div>
+        <div class="image-section">
+            <img src="https://img.freepik.com/premium-vector/volunteer-vector-flat-illustration_128291-124.jpg?w=740" alt="Volunteering Experience">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-community-spirit-illustration_23-2150188726.jpg?t=st=1738824656~exp=1738828256~hmac=dc516146ea5ac22ba0830adb5c747975ff9e94b6e3f2f8ba1e75b16b4339e0ee&w=740" alt="Community Engagement">
+            <div class="engagement-box">
+                <p><strong>97% User Engagement</strong><br>Join a community committed to enriching lives through volunteering.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

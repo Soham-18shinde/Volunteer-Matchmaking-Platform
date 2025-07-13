@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter your Interests</title>
+    <style>
+        body {
+            background-color: #000;
+            color: orange;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #1c1c1c;
+            padding: 30px;
+            width: 350px;
+            border: 2px solid grey;
+            box-shadow: 0 0 10px grey;
+            border-radius: 10px;
+            text-align: center;
+        }
+        select, input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid grey;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+        button {
+            background-color: orange;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: darkorange;
+        }
+        .availability-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter your Interest</h1>
+        <form id="interestsForm" action="skill.html" method="GET">
+            <label for="interest1"></label>
+            <select id="interest1" name="interest1" required>
+                <option value="">Select an interest</option>
+                <option value="Leadership">Leadership</option>
+                <option value="Communication">Communication</option>
+                <option value="Teamwork">Teamwork</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Others">Others</option>
+            </select>
+            <input type="text" id="otherInterest" name="otherInterest" placeholder="Enter your interest" style="display:none;">
+
+           
+
+            <button type="button" id="availabilityBtn">Choose your Availability</button>
+
+            <div class="availability-container" id="availabilityContainer">
+                <label for="startDate">From:</label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <label for="endDate">To:</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+
+            <button type="submit">Next</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('interest1').addEventListener('change', function() {
+            var otherInterestInput = document.getElementById('otherInterest');
+            if (this.value === 'Others') {
+                otherInterestInput.style.display = 'block';
+                otherInterestInput.required = true;
+            } else {
+                otherInterestInput.style.display = 'none';
+                otherInterestInput.required = false;
+            }
+        });
+
+        document.getElementById('availabilityBtn').addEventListener('click', function() {
+            var availabilityContainer = document.getElementById('availabilityContainer');
+            availabilityContainer.style.display = availabilityContainer.style.display === 'none' || availabilityContainer.style.display === '' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

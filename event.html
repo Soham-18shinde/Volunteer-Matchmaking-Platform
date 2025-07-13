@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Volunteering Events</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .event {
+            background: #111;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+            text-align:center;
+        }
+        .event i {
+            font-size: 30px;
+            margin-right: 15px;
+        }
+        .event-info {
+            flex: 1;
+        }
+        .event h3 {
+            margin: 0;
+        }
+        .event p {
+            margin: 5px 0;
+            text-align:center;
+        }
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .step {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .step i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .right-tick {
+            color: #0f0;
+            font-size: 25px;
+            margin-left: 10px;
+        }
+        @media (max-width: 768px) {
+            .event {
+                flex-direction: column;
+                text-align: center;
+            }
+            .step {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upcoming Volunteering Events</h2>
+        
+        <div class="event">
+            <i class="fas fa-hand-holding-heart"></i>
+            <div class="event-info">
+                <h3>Community Clean-Up <i class="fas fa-check right-tick"></i></h3>
+                <p>Date: March 10, 2025</p>
+                <p>Location: Central Park</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <i class="fas fa-book-reader"></i>
+            <div class="event-info">
+                <h3>Library Assistance <i class="fas fa-check right-tick"></i></h3>
+                <p>Date: March 15, 2025</p>
+                <p>Location: City Library</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <i class="fas fa-seedling"></i>
+            <div class="event-info">
+                <h3>Tree Plantation Drive <i class="fas fa-check right-tick"></i></h3>
+                <p>Date: March 20, 2025</p>
+                <p>Location: Riverside Park</p>
+            </div>
+        </div>
+
+        <h2>Steps to Join</h2>
+        <div class="steps">
+            <div class="step">
+                <i class="fas fa-user-plus"></i>
+                <p><a href='login.html' style='color: white; text-decoration: none;'>Sign Up & Create Profile</a> <i class="fas fa-check right-tick"></i></p>
+            </div>
+            <div class="step">
+                <i class="fas fa-search"></i>
+                <p>Browse Events <i class="fas fa-check right-tick"></i></p>
+            </div>
+            <div class="step">
+                <i class="fas fa-check-circle"></i>
+                <p><a href='finalapplicationform.html' style='color: white; text-decoration: none;'>Registeration Form</a> <i class="fas fa-check right-tick"></i></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

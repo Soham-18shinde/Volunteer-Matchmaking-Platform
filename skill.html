@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Skills</title>
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #1c1c1c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
+            width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FFA500; /* Orange shade */
+            margin-bottom: 20px;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #444;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #fff;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        select:focus, input[type="text"]:focus {
+            border: 2px solid #d3d3d3; /* Light grey border */
+            box-shadow: 0 0 10px #d3d3d3; /* Glowing effect */
+            outline: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: #FFA500; /* Orange shade */
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #FF8C00; /* Darker orange for hover */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Skills</h1>
+        <form id="skillsForm">
+            <select id="skill1" required>
+                <option value="" disabled selected>Choose Skill </option>
+                <option value="Event Organizer">Event Organizer</option>
+                <option value="Community Outreach">Community Outreach</option>
+                <option value="Fundraising Coordinator">Fundraising Coordinator</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <div id="otherSkill1" class="hidden">
+                <input type="text" placeholder="Enter Other Skill" required>
+            </div>
+
+            <input type="text" id="experience" placeholder="Your Experience (in years)" required>
+            <a href="home.html">
+                <button type="button">Submit</button>
+            </a>
+            
+        </form>
+    </div>
+
+    <script>
+        const skill1 = document.getElementById('skill1');
+        const otherSkill1 = document.getElementById('otherSkill1');
+
+        skill1.addEventListener('change', function () {
+            if (skill1.value === 'Other') {
+                otherSkill1.classList.remove('hidden');
+            } else {
+                otherSkill1.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('skillsForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html>

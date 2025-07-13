@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800 text-white">
+    <nav class="bg-gray-900 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="home.html" class="text-lg font-bold">Volunteer Platform</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="http://localhost/FC58/searchvol.php" class="hover:text-gray-400">Volunteers</a>
+                <a href="http://localhost/FC58/searchOppo.php" class="hover:text-gray-400">Opportunity</a>
+                <a href="https://rzp.io/l/AxJl9Hbi" class="hover:text-gray-400">Donate</a>
+                <a href="contactus.html" class="hover:text-gray-400">Contact Us</a>
+                <a href="login.html" class="hover:text-gray-400">Logout</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-gray-900 p-2">
+            <a href="http://localhost/FC58/searchvol.php" class="py-2 hover:text-gray-400">Volunteers</a>
+            <a href="http://localhost/FC58/searchOppo.php" class="py-2 hover:text-gray-400">Opportunity</a>
+            <a href="https://rzp.io/l/AxJl9Hbi" class="py-2 hover:text-gray-400">Donate</a>
+            <a href="contactus.html" class="py-2 hover:text-gray-400">Contact Us</a>
+            <a href="login.html" class="py-2 hover:text-gray-400">Logout</a>
+        </div>
+    </nav>
+    
+    <div class="container mx-auto px-4 py-10">
+        <h1 class="text-center text-3xl font-semibold mb-6">Contact Us</h1>
+        <form action="contact.php" method="POST" class="max-w-lg mx-auto bg-gray-700 p-6 rounded-lg shadow-lg">
+            <label class="block mb-2">Name:</label>
+            <input type="text" name="name" required class="w-full p-2 mb-4 border rounded bg-gray-800 text-white">
+
+            <label class="block mb-2">Email:</label>
+            <input type="email" name="email" required class="w-full p-2 mb-4 border rounded bg-gray-800 text-white">
+
+            <label class="block mb-2">Subject:</label>
+            <input type="text" name="subject" required class="w-full p-2 mb-4 border rounded bg-gray-800 text-white">
+
+            <label class="block mb-2">Message:</label>
+            <textarea name="message" rows="5" required class="w-full p-2 mb-4 border rounded bg-gray-800 text-white"></textarea>
+
+            <button type="submit" class="border border-gray-500  text-white px-4 py-2 rounded">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

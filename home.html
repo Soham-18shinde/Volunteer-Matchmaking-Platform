@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Platform</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+           
+        }
+
+        body {
+            background-image: linear-gradient(135deg, #fffdfd 30%, #666666 100%);
+            color: grey;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #222222;
+            border-bottom: 2px solid #444444;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .header-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .header-links button {
+            background-color: transparent;
+            color: white;
+            padding: 10px 15px;
+            border: 0px solid #000000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size:20px;
+        }
+
+        .header-links button:hover {
+            background-color: #555555;
+        }
+
+        /* Features Section */
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 10%;
+        }
+
+        .feature-box {
+            background: linear-gradient(135deg, #2d2d2d 30%, #3a3a3a 100%);
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(84, 90, 90, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #4b5151; /* Neon Border */
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px rgb(12, 13, 13);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-8px); }
+        }
+
+       
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 30px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+   min-width: 100v;
+}
+
+.footer-section h3 {
+    color: #f39c12;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 5px 0;
+    color: #bbb;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-section .social a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #f39c12;
+    transition: 0.3s;
+}
+
+.footer-section .social a:hover {
+    color: #e67e22;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+
+
+/* Ensure the footer is at the bottom */
+footer {
+    width: 100%; /* Full width */
+    background-color: #333; /* Example background color */
+    color: white;
+    position: relative;
+    bottom: 0;
+    padding: 20px 0;
+    margin-top: 50px; /* Adjust space above footer if necessary */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222; /* Dark background for footer bottom */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Adjust responsiveness if necessary */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+        
+
+.testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.sub-title {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.quote-icon {
+    font-size: 40px;
+    color: #111;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+
+    .quote-icon {
+        font-size: 30px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+
+    .user-info img {
+        width: 35px;
+        height: 35px;
+    }
+}
+.volunteer-container {
+            background: rgb(206, 205, 205);
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin:7px;
+            
+        }
+
+        .volunteer-container p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .enroll-btn {
+            background: #f97000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .enroll-btn:hover {
+            background: #e66300;
+            transform: scale(1.05);
+        }
+     
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="heading">
+            <h1>DevKnights</h1>
+            </div>
+
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+        </script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <div class="header-links">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="location.href='https://rzp.io/l/AxJl9Hbi'">Donate</button>
+            <button onclick="location.href='login.html'">Logout</button>
+        </div>
+    </header>
+    <div class="volunteer-container">
+        <p>Volunteering creates lasting impact, connecting you with others and building new skills. By giving your time, you help those in need and grow personally. Make a difference—volunteer today!</p>
+        <a href="interest.html" class="enroll-btn">Enroll Now</a>
+    </div>
+    <div class="features-container">
+        <div class="feature-box">
+            <div class="icon">⭐</div>
+            <h2>Personalized Matches</h2>
+            <p>Tailored volunteer opportunities based on individual skills and interests.</p>
+        </div>
+        <div class="feature-box">
+            <div class="icon">📊</div>
+            <h2>Opportunities Await</h2>
+            <p>Track your volunteering hours effortlessly while making a difference.</p>
+        </div>
+
+        <div class="feature-box" onclick="location.href='event.html';" style="cursor: pointer;">
+            <div class="icon">📅</div>
+            <h2>Upcoming Events</h2>
+            <p>Engage with local events and meet like-minded individuals.</p>
+        </div>
+
+       
+           
+            <div class="feature-box" onclick="location.href='dash.html';" style="cursor: pointer;">
+                <div class="icon">📈</div>
+                <h3>Dashboard</h3>
+                <p>Click here to view the dashboard</p>
+            </div>
+  
+    <section class="testimonials">
+        <div class="container text-center">
+            <h2 class="section-title">Empowering Testimonials from Volunteers</h2>
+            <p class="sub-title">Hear how volunteering has transformed lives and careers.</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+                        <p class="testimonial-text">Deeya says, 'VolunMap opened doors to service opportunities!'</p>
+                        <div class="user-info">
+                            <img src="https://img.freepik.com/free-photo/young-beautiful-woman-smiling-posing-purple-wall_176420-2852.jpg?t=st=1738789961~exp=1738793561~hmac=4ab46681429003e9ac35101331ca062d196d0457e1d28d615e6a30b665ab3b8e&w=900" alt="User Image">
+                            <span class="username">Deeya</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+                        <p class="testimonial-text">VolunMap guided my journey in meaningful volunteering, connecting me with remarkable groups!</p>
+                        <div class="user-info">
+                            <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-851.jpg?t=st=1738790039~exp=1738793639~hmac=645a60a3a6adc1a01eedc3fbae94a7e570acb9d92b049a38ffaafc54760a39a7&w=740" alt="User Image">
+                            <span class="username">Soham</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+                        <p class="testimonial-text">I found my passion alongside skilled individuals through VolunMap!</p>
+                        <div class="user-info">
+                            <img src="https://img.freepik.com/premium-psd/broadcaster-man-conversation-icon-isolated-transparent-background_1028938-536579.jpg?w=740" alt="User Image">
+                            <span class="username">Manas</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- <footer>
+        <p>Created by DevKnights : Pimpri Chinchwad University</p>
+        <p>For any queries, contact us at <span style="font-style: italic;">devKnights@gmail.com</span></p>
+    </footer> -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Connecting volunteers with meaningful opportunities to create a better world.</p>
+                <p>Created by DevKnights : Pimpri Chinchwad University</p>
+            </div>
+    
+    
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> devKnights@volunteerplatform.com</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> Pune, India</p>
+            </div>
+    
+       
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Volunteer Matching Platform | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

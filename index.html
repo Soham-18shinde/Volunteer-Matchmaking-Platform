@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    
+    <style>
+       
+      body{
+        width: 100%;
+        /* border: solid black; */
+        margin: 15px;
+        /* padding: %; */
+        background-color: rgb(255, 255, 255);
+        background-image: linear-gradient(135deg, #171616 30%, grey 100%);
+        /* background-image: url(images/LogoGreen.jpeg); */
+        flex-direction: column;
+        display: flex;
+      }
+      .logo {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 auto;
+        overflow: hidden;
+        height: 50px;
+        width: 70px;
+        padding-right: 33%;
+        /* background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%); */
+      }
+      
+      .logo img {
+        height: 50px;
+        width: 100px;
+      }
+      table{
+      width: 97%;
+      
+      /* border: solid black; */
+    }
+ 
+   
+    .login-button,
+    .signup-button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      flex: 15%;
+    }
+
+    
+    .login-button:hover,
+    .signup-button:hover {
+      background-color: #555;
+    }
+
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 30px 20px;
+    font-size: 14px;
+    
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+  
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    
+}
+
+.footer-section h3 {
+    color: #f39c12;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 5px 0;
+    color: #bbb;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-section .social a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #f39c12;
+    transition: 0.3s;
+}
+
+.footer-section .social a:hover {
+    color: #e67e22;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+        
+    }
+}
+
+
+
+/* Content Layout */
+.content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align */
+    text-align: center;
+    width: 100%;
+    padding:5px;
+    margin:5px;
+}
+
+
+/* Venn Diagram */
+.venn-diagram {
+    position: relative;
+    width: 250px;
+    height: 120px;
+    margin:2px;
+    padding:2px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: absolute;
+    color: white;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.overlap {
+    width: 80px;
+    height: 80px;
+    background: #666;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Text Section */
+.text-section h2 {
+    color: #fff;
+}
+
+.text-section p {
+    font-size: 16px;
+    color: #bbb;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-section i {
+    margin-right: 10px;
+    color: #f39c12;
+    font-size: 18px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .venn-diagram {
+        width: 180px;
+        height: 100px;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+    }
+
+    .overlap {
+        width: 60px;
+        height: 60px;
+        font-size: 10px;
+    }
+
+    
+}
+/* About Us Section Styling */
+.about-section {
+    background: linear-gradient(135deg, #0a0a0a 30%, #444 100%);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border: 3px solid #eae6e0;
+    border-radius: 10px;
+    background: rgba(112, 106, 106, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+.about-container h2 {
+    font-size: 28px;
+    color: #eeeae3;
+    margin-bottom: 15px;
+}
+
+.about-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Features Section */
+.about-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature-box {
+    background: #222;
+    padding: 20px;
+    border: 2px solid #9e9a94;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+.feature-box i {
+    font-size: 40px;
+    color: #b5b0a6;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-size: 20px;
+    color: #8f8b86;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 90%;
+    }
+}
+
+        
+        .hero-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #e0e0e0;
+        }
+        
+        .join-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .join-btn:hover {
+            background-color: #45a049;
+        }
+        .image-container {
+            position: relative;
+        }
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            height:370px;
+            border-radius: 400px;
+        }
+        .stats-box {
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 5px rgba(169, 169, 169, 0.8); /* Grey neon glow */
+}
+
+        .top-left { top: 10px; left: 39px; }
+        .top-right { top: 10px; right: 79px; }
+        .bottom-left { bottom: 10px; left: 40px; }
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content {
+                max-width: 100%;
+            }
+            .image-container {
+                margin-top: 20px;
+            }
+        }
+/* Tagline Styling */
+/* Tagline Styling */
+.tagline {
+    font-size: 38px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #222, #444); /* Black & Grey Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(101, 96, 95, 0.5); /* Orange Glow */
+    animation: glow 2s infinite alternate;
+}
+
+/* Highlighted Word */
+.tagline span {
+    color: #c9c9c8; /* Bright Orange */
+    text-shadow: 2px 2px 10px rgba(8, 8, 8, 0.8); /* Orange Glow */
+}
+
+/* Subtext */
+.subtext {
+    font-size: 18px;
+    color: #000000; /* Light Grey */
+    margin-top: 10px;
+    font-weight: 300;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 10px rgba(237, 233, 228, 0.5); /* Soft Orange Glow */
+    }
+    to {
+        text-shadow: 4px 4px 15px rgb(153, 151, 151); /* Stronger Orange Glow */
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .tagline {
+        font-size: 28px;
+    }
+
+    .subtext {
+        font-size: 16px;
+    }
+}
+
+
+    </style>
+hhow 
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">DevKnights</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto"> 
+        <a class="nav-link active" href="#">
+          Home
+          <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link" href="login.html"><span>Login</span></a>
+        <a class="nav-link" href="contactus.html">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+   
+  <header class="hero-section">
+    <div class="content">
+        <h1 class="fade-in tagline">Empower Change<br> One Skill at a Time!</h1>
+        <p class="fade-in subtext">Make an impact through skill-based volunteering tailored to your passion and availability🚀.</p>
+        
+    </div>
+    <div class="image-container fade-in">
+        <img src="https://img.freepik.com/free-vector/volunteering-flat-infographics-with-volunteers-cleaning-area-working-soup-kitchen-helping-animals-senior-people-vector-illustration_98292-9078.jpg?t=st=1738799308~exp=1738802908~hmac=4863b0bec7522a32d72bbe23ae341eb3924e6a6b893a3dcb79766ef96b45cd03&w=996" alt="Volunteers at work" class="hero-image">
+        <div class="stats-box top-left fade-in">1000+ users</div>
+        <div class="stats-box top-right fade-in">1200+ skills</div>
+        <div class="stats-box bottom-left fade-in">97% Volunteer Hours Counted</div>
+    </div>
+</header>
+
+
+
+
+
+    <div class="content">
+        <div class="venn-diagram">
+            <div class="circle left">Causes You <br> Care About</div>
+            <div class="circle right">Causes That <br> Need You</div>
+            <div class="overlap">Volunteer <br> Match</div>
+        </div>
+        
+        <div class="text-section">
+            <h2>Why Join VolunteerMatch?</h2>
+            <p><i class="fas fa-hand-holding-heart"></i> Connect with a cause that needs you.</p>
+            <p><i class="fas fa-globe"></i> We have <strong>100,000+</strong> nonprofits around the world who need your help.</p>
+            <p><i class="fas fa-search-location"></i> Uncover new volunteer opportunities that matter to you, wherever you are.</p>
+            
+        </div>
+    </div>
+    <section class="about-section">
+      <div class="about-container">
+          <h2>About Us</h2>
+          <p>At <strong>Volunteer Matching Platform</strong>, we connect passionate individuals with meaningful volunteer opportunities. Our goal is to empower people to make a difference in their communities through skill-based and interest-driven volunteering.</p>
+          <p>With thousands of nonprofits and organizations on board, we make volunteering easy, accessible, and impactful.</p>
+          <div class="about-features">
+              <div class="feature-box">
+                  <i class="fas fa-users"></i>
+                  <h3>Our Community</h3>
+                  <p>Join a network of dedicated volunteers and changemakers.</p>
+              </div>
+              <div class="feature-box">
+                  <i class="fas fa-hands-helping"></i>
+                  <h3>Mission</h3>
+                  <p>To bridge the gap between volunteers and organizations in need.</p>
+              </div>
+              <div class="feature-box">
+                  <i class="fas fa-globe"></i>
+                  <h3>Impact</h3>
+                  <p>Over <strong>100,000+</strong> hours volunteered across various causes.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+    <footer>
+      <div class="footer-container">
+          <div class="footer-section about">
+              <h3>About Us</h3>
+              <p>Connecting volunteers with meaningful opportunities to create a better world.</p>
+          </div>
+  
+          <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Find Opportunities</a></li>
+                  <li><a href="#">Organizations</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer-section contact">
+              <h3>Contact</h3>
+              <p><i class="fas fa-envelope"></i> devKnights@volunteerplatform.com</p>
+              <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+              <p><i class="fas fa-map-marker-alt"></i> Pune, India</p>
+          </div>
+  
+          <div class="footer-section social">
+              <h3>Follow Us</h3>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+          <p>&copy; 2025 Volunteer Matching Platform | <a href="#">Privacy Policy</a></p>
+      </div>
+  </footer>
+  <script>  gsap.from(".fade-in", {opacity: 0, y: 50, duration: 1, stagger: 0.3});
+    
+  </script>
+  <script src="js.js"></script>
+
+</body>
+</html>

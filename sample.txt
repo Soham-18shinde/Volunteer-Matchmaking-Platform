@@ -1,0 +1,137 @@
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://res.cloudinary.com/dqb67zwoq/image/upload/v1738765074/_e0826d1d-9602-4855-b8e8-d4d22a61a8a2_wxjzmh.jpg" class="d-block w-100" alt="Taj Mahal 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://res.cloudinary.com/dqb67zwoq/image/upload/v1738767057/b72ca6b6-dcad-4333-85fd-64101fb5659f_mbuuk8.png" class="d-block w-100" alt="Taj Mahal 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://res.cloudinary.com/dqb67zwoq/image/upload/v1738768104/_c3a61113-1fcd-42c9-9b8e-44c23c74e03a_ylunyq.jpg" class="d-block w-100" alt="Taj Mahal 3">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Matching Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .hero-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #e0e0e0;
+        }
+        .content {
+            max-width: 50%;
+        }
+        .join-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .join-btn:hover {
+            background-color: #45a049;
+        }
+        .image-container {
+            position: relative;
+        }
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .stats-box {
+            position: absolute;
+            background: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .top-left { top: 10px; left: 10px; }
+        .top-right { top: 10px; right: 10px; }
+        .bottom-left { bottom: 10px; left: 10px; }
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content {
+                max-width: 100%;
+            }
+            .image-container {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="content">
+            <h1 class="fade-in">Transforming Education <br>Through Volunteering</h1>
+            <p class="fade-in">Join us in making a difference with skills-based volunteering opportunities designed for your interests and availability.</p>
+            <button class="join-btn fade-in">Join Now</button>
+        </div>
+        <div class="image-container fade-in">
+            <img src="volunteer-image.jpg" alt="Volunteers at work" class="hero-image">
+            <div class="stats-box top-left fade-in">1000+ users</div>
+            <div class="stats-box top-right fade-in">1200+ skills</div>
+            <div class="stats-box bottom-left fade-in">97% Volunteer Hours Counted</div>
+        </div>
+    </header>
+
+    <script>
+        gsap.from(".fade-in", {opacity: 0, y: 50, duration: 1, stagger: 0.3});
+    </script>
+</body>
+</html>
+
+  <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+        </script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <div class="header-links">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="location.href='https://rzp.io/l/AxJl9Hbi'">Donate</button>
+            <button onclick="location.href='login.html'">Logout</button>
+        </div>
+<div class="header-links">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="location.href='https://rzp.io/l/AxJl9Hbi'">Donate</button>
+            <button onclick="location.href='login.html'">Logout</button>
+        </div>
+    </header>
